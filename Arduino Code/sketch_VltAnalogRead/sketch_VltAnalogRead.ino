@@ -1,0 +1,20 @@
+int readPin=A0;
+int readVal;
+float V2;
+int delayT(400);
+void setup() {
+  // put your setup code here, to run once:
+pinMode(readPin, INPUT);
+Serial.begin(115200);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+readVal=analogRead(readPin);
+V2=(5./1023.)*readVal;
+Serial.println(V2);
+delay(delayT);
+
+}
